@@ -1,25 +1,25 @@
-import * as sql from "mssql";
-import dotenv from "dotenv";
+ import * as sql from "mssql";
+ import dotenv from "dotenv";
 import { sqlConfig } from "../config/config";
 
 dotenv.config();
 
 const pool = new sql.ConnectionPool(sqlConfig);
-// console.log(pool);
+ console.log(pool);
 
-const poolConnect = pool.connect();
+ const poolConnect = pool.connect();
 
-export async function query(queryString: string): Promise<sql.IResult<any>> {
+ export async function query(queryString: string): Promise<sql.IResult<any>> {
   await poolConnect;
 
-  try {
+ try {
     const request = new sql.Request(pool);
     const result = await request.query(queryString);
     return result;
   } catch (error) {
     throw new Error(`Error executing SQL query: ${error}`);
   }
-}
+ }
 
 export const execute = async (
   procedureName: string,
@@ -43,13 +43,13 @@ export const execute = async (
   }
 };
 
-// `EXEC ${procedureName}` use when runiing stored procedure without params
+// // `EXEC ${procedureName}` use when runiing stored procedure without params
 
-// to use with params
-// const procedureName = 'MyProcedureWithParams'; // Replace with your actual procedure name
-//   const params = {
-//     Param1: 'Value1',
-//     Param2: 'Value2',
-//     // Add more parameters as needed
-//   };
-//     const result = await execute(procedureName, params);
+// // to use with params
+// // const procedureName = 'MyProcedureWithParams'; // Replace with your actual procedure name
+// //   const params = {
+// //     Param1: 'Value1',
+// //     Param2: 'Value2',
+// //     // Add more parameters as needed
+// //   };
+// //     const result = await execute(procedureName, params);
