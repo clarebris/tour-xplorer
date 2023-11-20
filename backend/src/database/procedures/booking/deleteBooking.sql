@@ -1,4 +1,4 @@
-CREATE OR ALTER  PROCEDURE [dbo].[deleteBooking]
+CREATE OR ALTER  PROCEDURE deleteBooking
 	@booking_id varchar(100)
 as
 

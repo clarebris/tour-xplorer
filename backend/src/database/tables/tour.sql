@@ -1,11 +1,15 @@
-CREATE TABLE Tours (
-  TourID VARCHAR(300) PRIMARY KEY,
-  Title VARCHAR(255) NOT NULL,
-  Description VARCHAR(300) NOT NULL,
-  Destination VARCHAR(255) NOT NULL,
-  Duration INT NOT NULL,
-  Price INT NOT NULL,
-  tourImage VARCHAR(255)
-  
-);
+
+
+CREATE  TABLE tours (
+	tour_id varchar(100) NOT NULL PRIMARY KEY,
+	tour_name varchar(100) NOT NULL,	
+	tour_description varchar(250) NOT NULL,
+	tour_img varchar(250),
+    price int not null,
+    start_date date not null,
+    end_date date not null,	
+	isDeleted BIT Default 0,
+)
+
+Drop TABLE tours
 

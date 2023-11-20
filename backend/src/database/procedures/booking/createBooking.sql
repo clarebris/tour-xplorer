@@ -1,4 +1,4 @@
-CREATE OR ALTER PROCEDURE [dbo].[createBooking]
+CREATE OR ALTER PROCEDURE createBooking
 	   (@booking_id varchar(100),
   @user_id varchar(100),
   @tour_id varchar(100),
