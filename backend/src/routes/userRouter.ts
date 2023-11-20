@@ -12,7 +12,7 @@ import {
 } from "../controllers/usercontroller";
 import { verifyToken } from "../middleware/verifyToken";
 
-const user_router = Router();
+export const user_router = Router();
 
 user_router.post("/register", registerUser);
 user_router.post("/login", loginUser);

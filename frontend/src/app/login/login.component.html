@@ -1,5 +1,22 @@
+ <div class="bg-lime-50 p-4 text-lime-950 overflow-hidden">
+    <div class="container flex justify-between items-center font-bond">
+      <h1 class="font-bold text-3xl">BRIS<br />ADVENTURES</h1>
+      <div class="flex flex-row justify-between gap-4">
+        <a routerLink="" routerLinkActive="active">Home</a>
+        <a routerLink="/tours">Tours</a>
+        <a routerLink="/blogs">Blogs</a>
+        <a routerLink="/about-us">About Us</a>
+        <a routerLink="/contact-us">Contact Us</a>
+      </div>
+      <div class="flex space-x-4">
+        <a routerLink='/signup'>Register</a>
+      </div>
+
+    </div>
+  </div>
+
 <div
-  class="bg-lime-200 flex gap-50 items-center justify-center w-[70vw] mt-[20vh] mx-auto h-[60vh] rounded-lg align-center"
+  class="bg-lime-200 flex gap-50 items-center justify-center w-[45vw]  mx-auto h-[50vh] rounded-lg align-center "
 >
   <form class="h-full p-10 flex flex-col gap-4 items-center">
     <div>
@@ -8,17 +25,17 @@
         class="h-[40px] w-[25vw]"
         type="text"
         id=""
-        placeholder="Email address"
+        placeholder="Email address" required
       />
     </div>
 
     <div>
       <label for="FormControl">Password </label><br />
-      <input class="h-[40px] w-[25vw]" type="password" placeholder="Password" />
+      <input class="h-[40px] w-[25vw]" type="password" placeholder="Password" required />
     </div>
 
     <div>
-      <input type="checkbox" value="" id="exampleCheck2" />
+      <input type="checkbox" value="" id="exampleCheck2"  />
       <label for="exampleCheck2"> Remember me </label>
     </div>
     <div>
@@ -26,11 +43,11 @@
     </div>
 
     <div class="text-center lg:text-left">
-      <button type="button" class="bg-blue-600 w-[15vw] text-center h-[35px]">Login</button>
+      <button (click)="navigateTouser()" class="bg-blue-600 w-[15vw] text-center h-[35px]">Login</button>
 
       <p>
         Don't have an account?
-        <a href="\frontend\src\app\sign-up\sign-up.component.html" class="text-blue-500">SignUp</a>
+        <a routerLink="/signup" class="text-blue-500">SignUp</a>
       </p>
     </div>
   </form>

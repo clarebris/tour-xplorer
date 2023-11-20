@@ -9,12 +9,11 @@ import { Router } from '@angular/router';
 })
 export class LandingpageComponent {
 
-// Inject the Router in the constructor
 constructor(private router: Router) {}
 
-// Use navigate method to navigate programmatically
+
 goToLogin() {
-  this.router.navigate(['/login']);
+  this.router.navigate(['login']);
 }
 
   }
