@@ -8,3 +8,4 @@ CREATE TABLE Tours (
   tourImage VARCHAR(255)
   
 );
+

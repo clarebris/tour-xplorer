@@ -9,6 +9,10 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { AdminComponent } from './admin/admin.component';
 import { ToursComponent } from './tours/tours.component';
 import { UserComponent } from './user/user.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,11 @@ import { UserComponent } from './user/user.component';
     SignUpComponent,
     AdminComponent,
     ToursComponent,
-    UserComponent
+    UserComponent,
+    SidebarComponent,
+    ResetpasswordComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
