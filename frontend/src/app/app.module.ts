@@ -13,6 +13,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 import { ResetpasswordComponent } from './resetpassword/resetpassword.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,7 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, FormsModule,ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
